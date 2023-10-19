@@ -241,7 +241,7 @@ readData = function( CSVFile , dateFormat = c( &quot;%Y-%m-%d&quot; , &quot;%Y/%
     data[ order(data$Date), ]
 }
 
-# DO NOT TEMPER CODE</code></pre>
+</code></pre>
 <pre class="r"><code># ******************** CORE CODE ********************
 # CREATE COMBINE2STOCKS FUNCTION - 6.3
 # Cutom function to combine 2 stock data sets into a single stock index
@@ -257,7 +257,7 @@ combine2Stocks = function( x, y , stockID = c(deparse(substitute(x)) , deparse(s
 structure(data.frame(x.sub$Date, x.sub$Adj.Close, y.sub$Adj.Close), names = c(&quot;Date&quot;,stockID)  )
 }
 
-# DO NOT TEMPER CODE</code></pre>
+</code></pre>
 <pre class="r"><code># ******************** CORE CODE ********************
 # CREATE PLOTRATIO FUNCTION - 6.4
 # Custom function to plot stock ratio for profitability analysis
@@ -272,7 +272,7 @@ plotRatio = function (r, k = 1 , date = seq(along = r), ... ){ # r == ratio of t
                    lty = &quot;dashed&quot; ) #lty : line type
 }
 
-# DO NOT TEMPER CODE</code></pre>
+</code></pre>
 <pre class="r"><code># ******************** CORE CODE ********************
 # CREATE FINDNEXT POSITION FUNCTION - 6.5
 # Custom function to find trading positions - opened &amp; closed
@@ -309,7 +309,7 @@ findNextPosition = function(ratio, startDate = 1 , k = 1 ,     #startDate is an 
                             
                       }
 
-# DO NOT TEMPER CODE</code></pre>
+</code></pre>
 <pre class="r"><code># ******************** CORE CODE ********************
 # CREATE SHOWPOSITION FUNCTION
 # Custom function to display the Position graphically
@@ -327,7 +327,7 @@ showPosition = function(days , ratio , radius=70 )
                     
                 # Green == Open , Red == Close
 
-# DO NOT TEMPER CODE</code></pre>
+</code></pre>
 <pre class="r"><code># ******************** CORE CODE ********************
 # CREATE SHOWPOSITION FUNCTION - 6.5 
 # Custom function to find ALL the Positions
@@ -352,7 +352,7 @@ getPositions = function(ratio , k = 1 , m = mean(ratio) , s = sd(ratio) )
                 }
 
 
-# DO NOT TEMPER CODE</code></pre>
+</code></pre>
 <pre class="r"><code># ******************** CORE CODE ********************
 # CREATE POSITIONPROFIT FUNCTION - 6.5 
 # Custom function to find the profit of a certain position
@@ -406,7 +406,7 @@ positionProfit = function(position , stockPriceA, stockPriceB ,    #Indexing usi
                     }
 
 
-# DO NOT TEMPER CODE</code></pre>
+</code></pre>
 <pre class="r"><code># ******************** EXTENSION CODE ********************
 # CREATE sellWhat FUNCTION - EXTENDS positionProfit()
 # Determines whether to sell A or B , buy A or B - dependent on ratio
@@ -431,7 +431,7 @@ sellWhat = function(position , stockPriceA, stockPriceB ,
               if(priceA[1]/priceB[1] &gt; ratioMean) &quot;A&quot; else &quot;B&quot;
 }
 
-# DO NOT TEMPER CODE</code></pre>
+</code></pre>
 <pre class="r"><code># ******************** EXTENSION CODE ********************
 # CREATE buyWhat FUNCTION - EXTENDS positionProfit()
 # Determines whether to sell A or B , buy A or B - dependent on ratio
@@ -456,7 +456,7 @@ buyWhat = function(position , stockPriceA, stockPriceB ,
               if(priceA[1]/priceB[1] &gt; ratioMean) &quot;B&quot; else &quot;A&quot;
 }
 
-# DO NOT TEMPER CODE</code></pre>
+</code></pre>
 <p>**** Why Would You Buy Shares of Stock? ****</p>
 <p>Investors buy stocks primarily to make a profit. But that said, it’s not the only reason to buy stocks. Let’s look at the most common reasons people buy stocks in the stock market:</p>
 <ol style="list-style-type: decimal">
