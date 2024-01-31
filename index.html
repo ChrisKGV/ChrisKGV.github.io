@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chris's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+
+<body>
+
+    <header>
+        <h1>Hi!👋🏽 Welcome to Chris Garcia's Portfolio</h1>
+        <div id="linkedin-section">
+            <img src="https://media.licdn.com/dms/image/D5603AQGufpS4GQLamw/profile-displayphoto-shrink_800_800/0/1697597895758?e=1709769600&v=beta&t=i72VEQtCg6c-A4BtG2JVJDY4mtjWHizcYNcP8Uam9AA"
+                alt="Profile Picture" class="profile-picture">
+            <a href="https://www.linkedin.com/in/chriskgarcia/" target="_blank" class="linkedin-button">
+                <img src="https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg"
+                    alt="LinkedIn Logo">
+            </a>
+        </div>
+        <h2>Passionately Product-Centric, Rooted in Technical Know-How</h2>
+        <p>Transitioning Technical Support Engineer striving for a Product Manager role. Adept in
+            software engineering with a knack for intuitive product design and user-centric solutions.</p>
+    </header>
+
+    <main>
+        <h2 class="section-title">Projects</h2>
+
+        <div class="project">
+            <h2 class="project-title" onclick="toggleAccordion(0)">Crowd-Plzr.fm <span class="project-excerpt">- a
+                    social listening room.</span></h2>
+            <div class="project-content">
+                <img src="crowdplzr.png" alt="Spotify Web App" width="900px" height="450px">
+                <p>For my senior capstone in computer science,I designed and developed a Spotify web app integrating
+                    their API to create a social listening room. The platform caters to user preferences by suggesting
+                    shared listening experiences. Built within an agile framework, this project epitomizes my commitment
+                    to crafting user-centered solutions, partnering closely with cross-functional teams, and my
+                    dedication to pushing boundaries in product development.</p>
+                <!-- GitHub Button -->
+                <a href="https://github.com/ChrisKGV/Crowd-Plzr.fm" target="_blank" class="github-button">
+                    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+                        alt="GitHub Logo" width="24" height="24">
+                    View on GitHub
+                </a>
+            </div>
+        </div>
+
+        <div id="accordion">
+            <div class="project">
+                <h2 class="project-title" onclick="toggleAccordion(1)">Flashy Bird <span class="project-excerpt">- a
+                        Flappy Bird clone.</span></h2>
+                <div class="project-content">
+                    <object data="https://cdn.jsdelivr.net/gh/ChrisKGV/FlashyBird@master/FlappyBird.swf" width="800"
+                        height="600" type="application/x-shockwave-flash"></object>
+
+                    <p> Crafted a 'Flappy Bird' clone employing ActionScript and Adobe Flash, with keyboard and mouse
+                        controls,
+                        collision detection, and sound features. Enhanced game performance by over 2X through a function
+                        for
+                        efficient pipe generation and re-positioning. Integrated game states for seamless transitions
+                        and
+                        interactive gameplay, demonstrated in-browser via a Rust-based Adobe Flash Player emulator, <a
+                            href="https://github.com/ruffle-rs/ruffle">Ruffle</a>.
+                    </p>
+                    <!-- GitHub Button -->
+                    <a href="https://github.com/ChrisKGV/FlashyBird" target="_blank" class="github-button">
+                        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+                            alt="GitHub Logo" width="24" height="24">
+                        View on GitHub
+                    </a>
+                </div>
+            </div>
+
+            <div class="project">
+                <h2 class="project-title" onclick="toggleAccordion(2)">Pair Trading Stock Analysis <span
+                        class="project-excerpt">- an intro to data science final project.</span></h2>
+                <div class="project-content">
+                    <iframe src="https://chriskgv.github.io/Stock" width="600" height="400"></iframe>
+                    <p>Explored Pairs Trading strategy by developing core R functions to manipulate and analyze stock
+                        data.
+                        Created a framework for combining datasets, plotting stock ratios, and executing trade decisions
+                        based on ratio means. Showcased findings through 5 demo displays, illustrating decision-making
+                        for
+                        buying/selling correlated stocks.</p>
+                    <!-- GitHub Button -->
+                    <a href="https://github.com/ChrisKGV/Pairs-Trading-Analysis" target="_blank" class="github-button">
+                        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+                            alt="GitHub Logo" width="24" height="24">
+                        View on GitHub
+                    </a>
+                </div>
+            </div>
+
+            <div class="project">
+                <h2 class="project-title" onclick="toggleAccordion(3)">Pong <span class="project-excerpt">- a classic
+                        pong game made for Android.</span></h2>
+                <div class="project-content">
+                    <video width="800" height="600" controls>
+                        <source src="Pong Demo Recording.webm" type="video/webm">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p>Developed a 'pong'-style game using Java in Android Studio, supporting touch controls like
+                        dragging and tapping. Structured the game using object-oriented principles, with dedicated
+                        classes for ball, player, and game mechanics. Integrated game states and threading to manage
+                        game dynamics like scoring, pausing, and collision detection.</p>
+                    <!-- GitHub Button -->
+                    <a href="https://github.com/ChrisKGV/Pong-Android" target="_blank" class="github-button">
+                        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+                            alt="GitHub Logo" width="24" height="24">
+                        View on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2023 Chris Garcia. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleAccordion(index) {
+            const content = document.getElementsByClassName('project-content')[index];
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
